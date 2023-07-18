@@ -1,0 +1,236 @@
+
+
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage{tabularx}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[english,spanish]{babel}
+
+
+% Define language-specific strings
+\newcommand{\langstring}[2]{\iflanguage{#1}{#2}{}}
+\newcommand{\en}[1]{\langstring{english}{#1}}
+\newcommand{\es}[1]{\langstring{spanish}{#1}}
+
+
+%----------FONT OPTIONS----------
+% sans-serif
+% \usepackage[sfdefault]{FiraSans}
+% \usepackage[sfdefault]{roboto}
+% \usepackage[sfdefault]{noto-sans}
+% \usepackage[default]{sourcesanspro}
+
+% serif
+% \usepackage{CormorantGaramond}
+% \usepackage{charter}
+
+
+
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+% Ensure that generate pdf is machine readable/ATS parsable
+\pdfgentounicode=1
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubSubheading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textit{\small#1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & #2 \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+%-------------------------------------------
+%%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\providecommand{\LANGUAGE}{english}
+
+\begin{document}
+\selectlanguage{\LANGUAGE}
+%----------HEADING----------
+% \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+%   \textbf{\href{http://sourabhbajaj.com/}{\Large Sourabh Bajaj}} & Email : \href{mailto:sourabh@sourabhbajaj.com}{sourabh@sourabhbajaj.com}\\
+%   \href{http://sourabhbajaj.com/}{http://www.sourabhbajaj.com} & Mobile : +1-123-456-7890 \\
+% \end{tabular*}
+
+\begin{center}
+    \textbf{\Huge \scshape Kevin Catino} \\ \vspace{1pt}
+    \small +54 3489-55-1616 $|$ \href{mailto:x@x.com}{\underline{kevincatino18@gmail.com}} $|$ 
+    \href{https://www.linkedin.com/in/khcatino}{\underline{www.linkedin.com/in/khcatino}} $|$
+    \href{https://github.com/Khato1319}{\underline{github.com/Khato1319}}
+\end{center}
+
+
+%-----------EDUCATION-----------
+\section{\en{Education}\es{Educación}}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {Escuela Técnica Roberto Rocca}{Campana, Buenos Aires}
+      {\en{Technical Degree in Electronics -- 9.02 GPA} \es{Tecnicatura en Electrónica -- Promedio 9,02}}{\en{Mar}\es{Mar}. 2013 -- \en{Dec}\es{Dic}. 2019}
+    \resumeSubheading
+      {\en{Buenos Aires Institute of Technology}\es{Instituto Tecnológico de Buenos Aires}}{Buenos Aires, Buenos Aires}
+      {\en{Software Engineering}\es{Ingeniería Informática} -- \en{Current GPA 8.96}\es{Promedio actual 8,96}}{\en{Mar}\es{Mar}. 2020 -- \en{Present (Currently 4th year)}\es{Presente (Actualmente en 4to año)}}
+  \resumeSubHeadingListEnd
+
+  %-----------ACHIEVEMENTS-----------
+
+\section{\en{Achievements}\es{Logros}}
+\resumeSubHeadingListStart
+\resumeSubheading
+    {Cambridge Certificate in Advanced English}{Buenos Aires, Buenos Aires}
+    {\en{Passed with 198/210}\es{Aprobado con 198/210} -- Upper C1 Level}{\en{Dec}\es{Dic}. 2019}
+  \resumeSubheading
+    {\en{National Math Olympiads}\es{Olimpíada Matemática Argentina}}{Mar Del Plata, Buenos Aires}
+    {\en{Passed Final Stage}\es{Certamen final aprobado}}{\en{Nov}\es{Nov}. 2017}
+    \resumeSubheading
+    {\en{National Math Team Olympiads}\es{Olimpíada Matemática Argentina} "Mateclubes"}{La Falda, Córdoba}
+    {\en{Passed Final Stage with special mention}\es{Instancia final aprobada con mención especial}}{2011, 2012, 2014}
+  \resumeSubheading
+    {Techint "Becas al Mérito"}{Campana, Buenos Aires}
+    {\en{Won Scholarship}\es{Beca recibida}}{\en{May}\es{Mayo} 2018}
+\resumeSubHeadingListEnd
+
+%-----------LANGUAGES-----------
+\section{\en{Languages}\es{Idiomas}}
+ \begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{
+     \textbf{\en{Spanish}\es{Español}}{: \en{Native}\es{Nativo}} \quad
+     \textbf{\en{English}\es{Inglés}}{: \en{Proficient}\es{Competencia profesional}} \quad
+     \textbf{\en{Japanese}\es{Japonés}}{: \en{Basic}\es{Básico}}
+    }}
+ \end{itemize}
+
+
+%-----------EXPERIENCE-----------
+\section{\en{Experience} \es{Experiencia}}
+  \resumeSubHeadingListStart
+  \resumeSubheading
+  {\en{Full-stack developer}\es{Desarrollador Full-Stack}}{Buenos Aires, Buenos Aires}
+  {Balanz Capital Valores}{\en{Oct.}\es{Oct.} 2022 -- \en{Present}\es{Presente}}
+  \resumeItemListStart
+  \resumeItem{\es{Desarrollo de sistema de generación de informes eficiente para la empresa, combinando tecnologías como Node.JS, SQL Server, HTML, CSS y módulos de terceros como Handlebars.JS y Puppeteer}\en{Developed a performant reporting system for the company combining technologies such as Node.JS, SQL Server, HTML, CSS, and third party modules such as Handlebars.JS and Puppeteer}.}
+  \resumeItem{\en{Contributed to the development of a Microservices architecture for client data processing in Golang}\es{Contribución en desarrollo de una arquitectura de Microservicios para el procesamiento de datos del cliente en Golang}.}
+  \resumeItemListEnd
+  \resumeSubheading
+  {\en{Teaching Assistant for Object-Oriented Programming Course}\es{Asistente profesor para curso de Programación Orientada a Objetos}}{Buenos Aires, Buenos Aires}
+  {\es{Instituto Tecnológico de Buenos Aires}\en{Buenos Aires Institute of Technology}}{\en{Aug}\es{Ago}. 2021 -- \en{Dec}\es{Dic}. 2022}
+ \resumeItemListStart
+  \resumeItem{\en{Assisted in teaching the fundamentals of Object-Oriented Programming (OOP), covering topics like polymorphism, inheritance, and composition}\es{Colaboración en la enseñanza de los fundamentos de la Programación Orientada a Objetos (POO), abarcando temas como polimorfismo, herencia y composición}.}
+  \resumeItem{\en{Supported the instruction of a Java-based course, which also introduced concepts like Iterators, Interfaces, and Abstract classes}\es{Apoyo en la instrucción de un curso basado en Java, que también introdujo conceptos como Iteradores, Interfaces y Clases abstractas}.}
+  \resumeItem{\en{Introduced students to Ruby programming language, providing an overview of its syntax and core concepts}\es{Presentación a los estudiantes del lenguaje de programación Ruby, brindando una visión general de su sintaxis y conceptos fundamentales}.}
+
+  \resumeItemListEnd
+  \resumeSubheading
+  {\es{Operador de aerosillas y soporte al cliente}\en{Customer Support and Lift Operator}}{Nagano, \en{Japan}\es{Japón}}
+  {Shiga-kogen \en{Ski Resort}\es{Resort de Ski}}{\en{Dec}\es{Dic}. 2019 -- \en{Feb}\es{Feb}. 2020}
+    \resumeSubheading
+    {\en{Electrical Department Internship}\es{Pasantía en Departamento de Electricidad}}{Campana, Buenos Aires}
+      {Termoeléctrica Manuel Belgrano}{\en{Sep}\es{Sep}. 2019 -- \en{Nov}\es{Nov}. 2019}
+
+  \resumeSubHeadingListEnd
+
+
+%-----------PROJECTS-----------
+\section{\en{Projects}\es{Proyectos}}
+    \resumeSubHeadingListStart
+      \resumeProjectHeading
+          { \href{http://pawserver.it.itba.edu.ar/paw-2022b-6/}{\textbf{Unbiased}} $|$ \emph{Spring Web MVC, Java, JavaScript, Next.JS, Bootstrap, Postgres, Agile}}{\en{Aug}\es{Ago}. 2022 -- \en{Feb}\es{Feb}. 2023}
+          \resumeItemListStart
+          \resumeItem{\en{Full-stack web-app focused on the publishing and consumption of news articles from independent journalists}\es{desarrollo una aplicación web full-stack enfocada en la publicación y consumo de artículos de noticias de periodistas independientes}.}
+            \resumeItem{\en{Helped develop a REST compliant backend API as well as the frontend with Next.JS}\es{Colaboración en el desarrollo de una API de backend compatible con REST, así como en el frontend con Next.JS}.}
+            \resumeItem{\en{Integrated Hibernate to the backend persistence layer and migrated from JDBC}\es{Integración de Hibernate en la capa de persistencia del backend y migración desde JDBC}.}
+          \resumeItemListEnd
+      \resumeProjectHeading
+          {\textbf{Cryptoriddles.io} $|$ \emph{JavaScript, Next.JS, TailwindCSS, Github, Agile}}{May 2022 -- Jul. 2022}
+          \resumeItemListStart
+          \resumeItem{\en{Educational group project which involved the full-stack development of a webpage}\es{Proyecto de grupo educativo que implicó el desarrollo full-stack de una página web}.}
+            \resumeItem{\en{Developed the front-end from scratch with no previous React nor Next.JS experience}\es{Se desarrolló el frontend desde cero sin experiencia previa en React ni Next.JS}.}
+          \resumeItemListEnd
+      \resumeProjectHeading
+          {\textbf{Homerun} $|$ \emph{JavaScript, Vue, Vuetify, Github, Java, Android Studio}}{May 2022 -- Jul. 2022}
+          \resumeItemListStart
+          \resumeItem{\en{Educational group project which involved the building of web and mobile interfaces for a home automation mock-app from an exististing back-end API}\es{
+Proyecto educativo de grupo que involucró la creación de interfaces web y móviles para una aplicación simulada de automatización del hogar a partir de una backend API existente}.}
+            \resumeItem{\en{Developed the front-end with no previous Vue, Vuetify, JavaScript or Android development experience}\es{Desarrollo de front-end sin experiencia previa en Vue, Vuetify, JavaScript o desarrollo Android}.}
+          \resumeItemListEnd
+    \resumeSubHeadingListEnd
+
+
+
+%
+%-----------PROGRAMMING SKILLS-----------
+\section{\en{Technical Skills}\es{Habilidades Técnicas}}
+ \begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{
+     \textbf{\en{Languages}\es{Lenguajes}}{: JavaScript, Java, C, SQL (Postgres), Golang, Ruby, Terraform, HTML, CSS} \\
+     \textbf{Frameworks}{: React, Next.JS, TailwindCSS, Vue.JS, Vuetify} \\
+     \textbf{\es{Otras herramientas de desarrollo/Plataformas}\en{Other Developer Tools/Platforms}}{: Git, Github, Bitbucket, Docker, AWS, VS Code, IntelliJ, WebStorm, Android Studio, JIRA}
+    }}
+ \end{itemize}
+
+
+%-------------------------------------------
+\end{document}
