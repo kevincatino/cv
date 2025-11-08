@@ -3,24 +3,23 @@
 \documentclass[letterpaper,11pt]{article}
 
 \usepackage{latexsym}
-\usepackage[empty]{fullpage}
 \usepackage{titlesec}
 \usepackage{marvosym}
-\usepackage[usenames,dvipsnames]{color}
+\usepackage[usenames,dvipsnames]{xcolor}
 \usepackage{verbatim}
 \usepackage{enumitem}
-\usepackage[hidelinks]{hyperref}
 \usepackage{fancyhdr}
 \usepackage{tabularx}
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
 \usepackage[english,spanish]{babel}
+\usepackage[letterpaper, left=0.5in, right=0.5in, top=0.5in, bottom=0.5in]{geometry}
+\usepackage[hidelinks]{hyperref}
 
 
 % Define language-specific strings
-\newcommand{\langstring}[2]{\iflanguage{#1}{#2}{}}
-\newcommand{\en}[1]{\langstring{english}{#1}}
-\newcommand{\es}[1]{\langstring{spanish}{#1}}
+\newcommand{\en}[1]{\iflanguage{english}{#1}{}}
+\newcommand{\es}[1]{\iflanguage{spanish}{#1}{}}
 
 
 
@@ -29,13 +28,6 @@
 \fancyfoot{}
 \renewcommand{\headrulewidth}{0pt}
 \renewcommand{\footrulewidth}{0pt}
-
-% Adjust margins
-\addtolength{\oddsidemargin}{-0.5in}
-\addtolength{\evensidemargin}{-0.5in}
-\addtolength{\textwidth}{1in}
-\addtolength{\topmargin}{-.5in}
-\addtolength{\textheight}{1.0in}
 
 \urlstyle{same}
 
@@ -54,34 +46,32 @@
 %-------------------------
 % Custom commands
 \newcommand{\resumeItem}[1]{
-  \item\small{
-    {#1 \vspace{-2pt}}
-  }
+  \item{\small #1}
 }
 
 \newcommand{\resumeSubheading}[4]{
-  \vspace{-2pt}\item
+  \item
     \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
       \textbf{#1} & #2 \\
       \textit{\small#3} & \textit{\small #4} \\
-    \end{tabular*}\vspace{-7pt}
+    \end{tabular*}
 }
 
 \newcommand{\resumeSubSubheading}[2]{
     \item
     \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
       \textit{\small#1} & \textit{\small #2} \\
-    \end{tabular*}\vspace{-7pt}
+    \end{tabular*}
 }
 
 \newcommand{\resumeProjectHeading}[2]{
     \item
     \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
       \small#1 & #2 \\
-    \end{tabular*}\vspace{-7pt}
+    \end{tabular*}
 }
 
-\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}}
 
 \renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
 
@@ -98,11 +88,6 @@
 \begin{document}
 \selectlanguage{\LANGUAGE}
 %----------HEADING----------
-% \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
-%   \textbf{\href{http://sourabhbajaj.com/}{\Large Sourabh Bajaj}} & Email : \href{mailto:sourabh@sourabhbajaj.com}{sourabh@sourabhbajaj.com}\\
-%   \href{http://sourabhbajaj.com/}{http://www.sourabhbajaj.com} & Mobile : +1-123-456-7890 \\
-% \end{tabular*}
-
 \begin{center}
     \textbf{\Huge \scshape Kevin Catino} \\ \vspace{1pt}
     \small +54 3489-55-1616 $|$ \href{mailto:x@x.com}{\underline{kevincatino18@gmail.com}} $|$ 
@@ -117,32 +102,37 @@
   \resumeSubheading
   {\en{Instituto Tecnológico de Buenos Aires}\es{Instituto Tecnológico de Buenos Aires}}{Buenos Aires, Buenos Aires}
   {\en{Software Engineering}\es{Ingeniería Informática} -- \en{GPA 8.74}\es{Promedio 8,74}}{\en{Mar}
-  \es{Mar}. 2020 -- \en{Jul. 2025}\es{Jul. 2025}}
-    % \resumeSubheading
-    %   {Escuela Técnica Roberto Rocca}{Campana, Buenos Aires}
-    %   {\en{Technical Degree in Electronics -- 9.02 GPA} \es{Tecnicatura en Electrónica -- Promedio 9,02}}{\en{Mar}
-    %   \es{Mar}. 2013 -- \en{Dec}\es{Dic}. 2019}
+  \es{Mar.} 2020 -- \en{Jul. 2025}\es{Jul. 2025}}
   \resumeSubHeadingListEnd
 
 
 %-----------LANGUAGES-----------
 \section{\en{Languages}\es{Idiomas}}
- \begin{itemize}[leftmargin=0.15in, label={}]
-    \small{\item{
+ \resumeSubHeadingListStart
+    \item \small{
      \textbf{\en{Spanish}\es{Español}}{: \en{Native}\es{Nativo}} \quad
      \textbf{\en{English}\es{Inglés}}{: \en{Proficient}\es{Competencia profesional}} \quad
      \textbf{\en{Japanese}\es{Japonés}}{: \en{Basic}\es{Básico}}
-    }}
- \end{itemize}
+    }
+ \resumeSubHeadingListEnd
 
 
 %-----------EXPERIENCE-----------
 \section{\en{Experience} \es{Experiencia}}
   \resumeSubHeadingListStart
   \resumeSubheading
+  {\en{Cloud \& Platform Software Engineer (Semi Senior)}\es{Cloud \& Platform Software Engineer (Semi Senior)} -- Mercado Libre}{Buenos Aires, Buenos Aires}
+  {(Kotlin, Java, AWS, GCP, Terraform, Docker, MySQL, Node.JS)}{\en{Oct.}\es{Oct.} 2025 -- \en{Present}\es{Presente}}
+  % \resumeItemListStart
+  % \resumeItem{\es{Diseño, desarrollo y mantenimiento de microservicios escalables y soluciones de plataforma en la nube utilizando Kotlin, Java y diversas tecnologías en la nube.}
+  % \en{Designed, developed, and maintained scalable microservices and cloud platform solutions using Kotlin, Java, and various cloud technologies.}}
+  % \resumeItem{\es{Gestión de infraestructura multi-cloud como código (IaC) con Terraform en AWS y GCP, garantizando implementaciones robustas y automatizadas.}
+  % \en{Managed multi-cloud infrastructure as code (IaC) with Terraform across AWS and GCP, ensuring robust and automated deployments.}}
+  % \resumeItemListEnd
+  \resumeSubheading
   {\en{Software Engineer II}\es{Software Engineer II} -- Innovid}{Buenos Aires, Buenos Aires}
 {(Scala, Java, Snowflake, Spark, Docker, Argo, AWS, Terraform, TeamCity)}
-  {\en{June}\es{Junio} 2024 -- \en{Present}\es{Presente}}
+  {\en{June}\es{Junio} 2024 -- \en{Oct.}\es{Oct.} 2025}
   \resumeItemListStart
   \resumeItem{\es{Diseño, desarrollo y despliegue de proyecto en Scala+DBT+Spark para integración de datos de terceros a sistema de resolución de identidad, introduciendo Apache Iceberg como una alternativa de menor costo a Snowflake para almacenamiento.}
   \en{Designed, developed, and deployed a Scala+DBT+Spark project for integrating third-party data into an identity resolution system, introducing Apache Iceberg as a cost-saving storage alternative to Snowflake.}}
@@ -154,23 +144,18 @@
   \en{Maintained and added various features to existing services developed in Scala, Python, Java, DBT, and Node.js.}}
   \resumeItemListEnd
   \resumeSubheading
-  {\en{Backend developer}\es{Desarrollador Backend} -- Balanz Capital Valores}{Buenos Aires, Buenos Aires}
-  {(Java, Postgres, Docker, AWS)}{\en{Jan.}\es{Enero} 2024 -- \en{June}\es{Junio} 2024}
+  {\en{Software Developer}\es{Desarrollador de Software} -- Balanz Capital Valores}{Buenos Aires, Buenos Aires}
+  {(Java, Golang, SQL Server, Postgres, Docker, Node.JS, AWS)}{\en{Oct.}\es{Oct.} 2022 -- \en{June}\es{Junio} 2024}
   \resumeItemListStart
   \resumeItem{\es{Constribución en el desarrollo de API con el uso de Spring Boot para permitir una comunicación con 
   Brokers externos con el objetivo de ampliar el servicio hacia el mercado de acciones de los Estados Unidos.}
   \en{Developed an API with Spring Boot to allow effective exchange of data with external brokers in order to provide 
   services to clients allowing operations with NYSE.}}
-  \resumeItemListEnd
-  \resumeSubheading
-  {\en{Full-stack developer}\es{Desarrollador de Software} -- Balanz Capital Valores}{Buenos Aires, Buenos Aires}
-  {(Golang, SQL Server, Postgres, Docker, Node.JS)}{\en{Oct.}\es{Oct.} 2022 -- \en{June}\es{Junio} 2024}
-  \resumeItemListStart
   \resumeItem{\es{Desarrollo de sistema de generación de informes eficiente para la empresa, combinando tecnologías como
 -  Node.JS, SQL Server, HTML, CSS y módulos de terceros como Handlebars.JS y Puppeteer. Actualmente utilizado por miles 
-de usuarios en forma diaria.}
+de clientes en forma diaria.}
   \en{Developed a performant reporting system for the company combining technologies such as Node.JS, SQL Server, HTML,
-CSS, and third party modules such as Handlebars.JS and Puppeteer. Currently being used on a daily basis by thousands of 
+CSS, and third party modules such as Handlebars.JS and Puppeteer. Currently being used on a daily basis by thousands of clients 
 to visualize their portfolio holdings.}}
   \resumeItem{\en{Contributed to the development of a Microservices architecture for client data processing in Golang.}
   \es{Contribución en desarrollo de una arquitectura de Microservicios para el procesamiento de datos del cliente en Golang.}}
@@ -207,71 +192,13 @@ to visualize their portfolio holdings.}}
 %
 %-----------PROGRAMMING SKILLS-----------
 \section{\en{Technical Skills}\es{Habilidades Técnicas}}
- \begin{itemize}[leftmargin=0.15in, label={}]
-    \small{\item{
-     \textbf{\en{Languages}\es{Lenguajes}}{: Java, Javascript, Scala, C, Golang, Ruby, HCL, Python, HTML, CSS} \\
-     \textbf{\en{Databases}\es{Bases de datos}}{: PostgreSQL, SQL Server, Snowflake, MongoDB, Neo4j, Redis, DynamoDB} \\
-     \textbf{Frameworks}{: Spring, Express.JS, React, Next.JS, TailwindCSS, Vue.JS, Vuetify} \\
-     \textbf{\es{Otras herramientas de desarrollo/Plataformas}\en{Other Developer Tools/Platforms}}{: Kubernetes, Argo, Terraform, Git, Github, 
-     Bitbucket, Gitlab, Neovim, Docker, TeamCity, Gitlab CI, Makefile, AWS, VS Code, IntelliJ, WebStorm, Android Studio, JIRA}
-    }}
+ \begin{itemize}[leftmargin=0.15in, label={}, itemsep=-4pt]
+    \resumeItem{\textbf{\en{Languages}\es{Lenguajes}}: Java, Javascript, Scala, C, Golang, Ruby, HCL, Python, HTML, CSS}
+    \resumeItem{\textbf{\en{Databases}\es{Bases de datos}}: PostgreSQL, SQL Server, Snowflake, MongoDB, Neo4j, Redis, DynamoDB}
+    \resumeItem{\textbf{Frameworks}: Spring, Express.JS, React, Next.JS, TailwindCSS, Vue.JS, Vuetify}
+    \resumeItem{\textbf{\es{Otras herramientas de desarrollo/Plataformas}\en{Other Developer Tools/Platforms}}: Kubernetes, Argo, Terraform, Git, Github, Bitbucket, Gitlab, Neovim, Docker, TeamCity, Gitlab CI, Makefile, AWS, VS Code, IntelliJ, WebStorm, Android Studio, JIRA}
+    \resumeItem{\textbf{\en{AI Tools}\es{Herramientas de IA}}: Cursor, Codex CLI, Claude Code, Notebook LM, Gemini CLI, Gemini Studio, Chat GPT}
  \end{itemize}
-
-
-%-----------PROJECTS-----------
-%\section{\en{Personal Projects}\es{Proyectos Personales}}
-%    \resumeSubHeadingListStart
-%      \resumeProjectHeading
-%          { \href{http://pawserver.it.itba.edu.ar/paw-2022b-6/}{\textbf{Unbiased}} $|$ \emph{Spring Web MVC, Java,
-%          JavaScript, Next.JS, Bootstrap, Postgres, Agile}}{\en{Aug}\es{Ago}. 2022 -- \en{Feb}\es{Feb}. 2023}
-%          \resumeItemListStart
-%          \resumeItem{\en{Full-stack web-app focused on the publishing and consumption of news articles from independent 
-%          journalists.}\es{Desarrollo de una aplicación web full-stack enfocada en la publicación y consumo de artículos 
-%        de noticias de periodistas independientes.}}
-%            \resumeItem{\en{Helped develop a REST compliant backend API as well as the frontend with Next.JS.}
-%            \es{Colaboración en el desarrollo de una API de backend compatible con REST, así como en el frontend con Next.JS.}}
-%            \resumeItem{\en{Integrated Hibernate to the backend persistence layer and migrated from JDBC.}
-%            \es{Integración de Hibernate en la capa de persistencia del backend y migración desde JDBC.}}
-%          \resumeItemListEnd
-%      \resumeProjectHeading
-%          {\textbf{Cryptoriddles.io} $|$ \emph{JavaScript, Next.JS, TailwindCSS, Github, Agile}}{May 2022 -- Jul. 2022}
-%          \resumeItemListStart
-%          \resumeItem{\en{Educational group project which involved the full-stack development of a webpage.}
-%          \es{Proyecto de grupo educativo que implicó el desarrollo full-stack de una página web.}}
-%            \resumeItem{\en{Developed the front-end from scratch with no previous React nor Next.JS experience.}
-%            \es{Se desarrolló el frontend desde cero sin experiencia previa en React ni Next.JS.}}
-%          \resumeItemListEnd
-%      \resumeProjectHeading
-%          {\textbf{Homerun} $|$ \emph{JavaScript, Vue, Vuetify, Github, Java, Android Studio}}{May 2022 -- Jul. 2022}
-%          \resumeItemListStart
-%          \resumeItem{\en{Educational group project which involved the building of web and mobile interfaces for a home 
-%            automation mock-app from an exististing back-end API.}\es{
-%Proyecto educativo de grupo que involucró la creación de interfaces web y móviles para una aplicación simulada de 
-%automatización del hogar a partir de una backend API existente.}}
-%            \resumeItem{\en{Developed the front-end with no previous Vue, Vuetify, JavaScript or Android development 
-%            experience.}\es{Desarrollo de front-end sin experiencia previa en Vue, Vuetify, JavaScript o desarrollo Android.}}
-%          \resumeItemListEnd
-%    \resumeSubHeadingListEnd
-%
-
-  %-----------ACHIEVEMENTS-----------
-
-%\section{\en{Achievements}\es{Logros}}
-%\resumeSubHeadingListStart
-%\resumeSubheading
-%    {Cambridge Certificate in Advanced English}{Buenos Aires, Buenos Aires}
-%    {\en{Passed with score of 198/210}\es{Aprobado con puntaje de 198/210} -- Upper C1 Level}{\en{Dec}\es{Dic}. 2019}
-%  \resumeSubheading
-%    {Techint "Becas al Mérito"}{Campana, Buenos Aires}
-%    {\en{Won Scholarship}\es{Beca recibida}}{\en{May}\es{Mayo} 2018}
-%  \resumeSubheading
-%    {\en{National Math Olympiads}\es{Olimpíada Matemática Argentina}}{Mar Del Plata, Buenos Aires}
-%    {\en{Passed Final Stage}\es{Certamen final aprobado}}{\en{Nov}\es{Nov}. 2017}
-%    % \resumeSubheading
-%    % {\en{National Math Team Olympiads}\es{Olimpíada Matemática Argentina} "Mateclubes"}{La Falda, Córdoba}
-%    % {\en{Passed Final Stage with special mention}\es{Instancia final aprobada con mención especial}}{2011, 2012, 2014}
-%\resumeSubHeadingListEnd
-
 
 
 %-------------------------------------------
